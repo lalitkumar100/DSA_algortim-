@@ -1,0 +1,17 @@
+Algorithm BUCKET_SORT(A, n)
+
+Input:  Array A[1...n] with real numbers in range [0, 1)
+Output: Sorted array A
+
+1. Create n empty buckets: B[0...n-1]
+
+2. for i ← 1 to n do
+       index ← floor(n * A[i])
+       Insert A[i] into bucket B[index]
+
+3. for i ← 0 to n-1 do
+       Sort bucket B[i] using Insertion Sort
+
+4. Concatenate all buckets B[0] to B[n-1] into array A
+
+5. Return A
